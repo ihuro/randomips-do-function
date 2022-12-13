@@ -36,6 +36,7 @@ def main(args):
         return return_for_do_function({
             "ips": output_json(ips),
             "error": "",
+            "_args": args,
         })
     except Exception as exc:
         return return_error(str(exc))
