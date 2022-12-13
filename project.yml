@@ -1,0 +1,5 @@
+packages:
+  - name: randomips
+    actions:
+      - name: generate
+        runtime: 'python:default'
