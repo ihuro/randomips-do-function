@@ -35,8 +35,9 @@ def main(args):
         ips = generate_random_ips(quantity)
         return return_for_do_function({
             "ips": output_json(ips),
-            "error": "",
-            "_args": args,
+            "error": None,
+            "requested_by": args.get('http', {}).get('headers', {}).get('do-connecting-ip', ''),
+            "requested_quantity": quantity,
         })
     except Exception as exc:
         return return_error(str(exc))
